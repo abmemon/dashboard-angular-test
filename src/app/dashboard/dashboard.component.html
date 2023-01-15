@@ -1,0 +1,59 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6" >
+              <div class="card card-stats">
+                  <div class="card-header card-header-warning card-header-icon">
+                      <p class="card-category">Login Users</p>
+                      <h3 class="card-title" *ngIf="isLoginLoad">{{ logins.today_login }} <small>Today</small>
+                      </h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats" *ngIf="isLoginLoad">
+                        <strong >{{logins.month_login}}</strong> <i class="material-icons"> (This Month)</i> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                      <p class="card-category">Active Users</p>
+                      <h3 class="card-title" *ngIf="isActiveLoad">{{ actives.today_active }} <small>Today</small> </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats" *ngIf="isActiveLoad">
+                        <strong>{{actives.month_active}}</strong> <i class="material-icons"> (This Month)</i> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 pt-2 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-danger card-header-icon">
+                    <p class="card-category">Transaction</p>
+                    <h3 class="card-title" *ngIf="isTransactionLoad">{{transactions.today_trans}} <small>Today</small> </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats" *ngIf="isTransactionLoad">
+                        <strong>{{transactions.month_trans}}</strong> <i class="material-icons"> (This Month)</i> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 pt-2 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-info card-header-icon">
+                      <p class="card-category">Revenue</p>
+                      <h3 class="card-title" *ngIf="isRevenueLoad">{{revenue.today_rev}} <small>Today</small> </h3>
+                  </div>
+                  <div class="card-footer">
+                    <div class="stats" *ngIf="isRevenueLoad">
+                        <strong>{{revenue.month_rev}}</strong> <i class="material-icons"> (This Month)</i> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
