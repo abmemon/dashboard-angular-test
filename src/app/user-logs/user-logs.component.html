@@ -1,28 +1,30 @@
 <h3>User Logs</h3>
-<h5>Test data with render in table ...</h5>
+<h5>Test data form .Net API with Database render in table </h5>
 <div class="row">
   <div class="col-12">
-    <p>
+    <!-- <p>
       User Active: <strong>{{ getRowsValue(true) }}</strong> <br>
       User Inactive : <strong>{{ getRowsValue(false) }}</strong> <br>
       Total User: <strong>{{ getRowsValue(null) }}</strong>
-    </p>
+    </p> -->
 
     <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Status</th>
+          <th scope="col">CNIC</th>
+          <th scope="col">Address</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let usr of userArr; let i = index">
+        <!-- <tr *ngFor="let usr of userArr; let i = index"> -->
+        <tr *ngFor="let usr of customers; let i = index">
           <th>{{ i + 1 }}</th>
           <td>{{ usr.name }}</td>
-          <td>{{ usr.description }}</td>
-          <td>{{ usr.state ? 'Active': 'InActive' }}</td>
+          <td>{{ usr.cnic }}</td>
+          <td>{{ usr.address }}</td>
+          <!-- <td>{{ usr.state ? 'Active': 'InActive' }}</td> -->
         </tr>
       </tbody>
     </table>

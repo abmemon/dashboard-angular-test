@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit{
   isActiveLoad = false;
   isTransactionLoad = false;
   isRevenueLoad = false;
+  
   constructor(private service:DashboardService){
     //this.isLoad = false;
   }
